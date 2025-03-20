@@ -1,0 +1,53 @@
+<aside class="aside-nav">
+    <div class="aside-nav__top">
+        <header class="aside-nav__header">
+            <img src="/assets/img/X-Vector.webp" alt="Xchange-logo" class="aside-nav__logo">
+            <h2 class="aside-nav__title">camp</h2>
+        </header>
+        <div class="aside-nav__tabs">
+            <button class="aside-nav__tab aside-nav__tab--active">Ecosystem</button>
+            <button class="aside-nav__tab aside-nav__tab--inactive">Project</button>
+        </div>
+        <nav class="aside-nav__menu">
+            <xc-aside-links [route]="'/feed'" [label]="'Feed'" iconName="wifi">
+            </xc-aside-links>
+            <xc-aside-links [route]="'/projects'" [label]="'Projects'" iconName="rocket">
+            </xc-aside-links>
+            <xc-aside-links [route]="'/community'" [label]="'Community'" iconName="community">
+            </xc-aside-links>
+            <xc-aside-links [route]="'/dashboard'" [label]="'Dashboard'" iconName="dashboard">
+            </xc-aside-links>
+            <xc-aside-links [route]="'/admin'" [label]="'Admin'" iconName="admin">
+            </xc-aside-links>
+        </nav>
+    </div>
+    <nav class="aside-nav__bottom-menu" *ngFor="let user of users">
+        <button href="/profile" class="aside-nav__user">
+            <span class="aside-nav__user-info">
+                <img src="https://randomuser.me/api/portraits/women/28.jpg" alt="user_image" class="aside-nav__user-img">
+                <p class="aside-nav__text">My profile</p>
+            </span>
+            <span class="aside-nav__arrow">
+                <xc-icon-angle-right class="aside-nav__arrow-icon"/>
+            </span>
+        </button>
+        <button href="/support" class="aside-nav__support">
+            <span class="aside-nav__support-info">
+                <xc-icon-question-circle class="aside-nav__support-icon" />
+                <p class="aside-nav__text">Support</p>
+            </span>
+            <span class="aside-nav__arrow">
+                <xc-icon-angle-right class="aside-nav__arrow-icon"/>
+            </span>
+        </button>
+        <button href="/logout" class="aside-nav__logout">
+            <span class="aside-nav__logout-info">
+                <img src="/assets/icons/fi_log-out.svg" alt="logout icon" class="aside-nav__logout-icon">
+                <p class="aside-nav__text">Logout</p>
+            </span>
+            <span class="aside-nav__arrow">
+                <xc-icon-angle-right class="aside-nav__arrow-icon"/>
+            </span>
+        </button>
+    </nav>
+</aside>
